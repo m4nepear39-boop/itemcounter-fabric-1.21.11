@@ -68,7 +68,10 @@ public class HudEditScreen extends Screen {
         // --- Draw the counter + an outline (yellow while dragging) ---
         ItemCounterHud.draw(context);
         int outline = (dragging || overBox) ? 0xFFFFFF55 : 0xFFFFFFFF;
-        context.drawBorder(cfg.x - 1, cfg.y - 1, w + 2, h + 2, outline);
+        context.fill(cfg.x - 1, cfg.y - 1, cfg.x + w + 1, cfg.y, outline);
+context.fill(cfg.x - 1, cfg.y + h, cfg.x + w + 1, cfg.y + h + 1, outline);
+context.fill(cfg.x - 1, cfg.y, cfg.x, cfg.y + h, outline);
+context.fill(cfg.x + w, cfg.y, cfg.x + w + 1, cfg.y + h, outline);
     }
 
     @Override
