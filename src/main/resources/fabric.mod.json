@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "itemcounter",
+  "version": "${version}",
+  "name": "Item Counter",
+  "description": "Shows how many of a chosen item you have in your inventory. Drag it anywhere on screen.",
+  "authors": ["You"],
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["com.example.itemcounter.ItemCounterClient"]
+  },
+  "depends": {
+    "fabricloader": ">=0.18.1",
+    "minecraft": "~1.21.11",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
